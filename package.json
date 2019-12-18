@@ -1,0 +1,28 @@
+{
+  "name": "flagapp",
+  "version": "1.0.0",
+  "description": "flag app API",
+  "main": "injsdex.",
+  "scripts": {
+  "test":"mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvelynArinaitwe/flagApp.git"
+  },
+  "author": "Evelyn Arinaitwe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EvelynArinaitwe/flagApp/issues"
+  },
+  "homepage": "https://github.com/EvelynArinaitwe/flagApp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "mocha": "^6.2.2"
+  }
+}
