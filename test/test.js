@@ -1,30 +1,38 @@
 //import { request } from "express";
-const request = require('express');
+const request = require('supertest');
+const expect = require('chai').expect;
 const app = require('express');
 
-//import { request } from "express";
-
-//import { request } from "express"
-
-/*var assert = require('assert');
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal([1, 2, 3].indexOf(4), -1);
-    });
-  });
-});*/
-
-/*var should = require('should');
-var assert = require('assert');
-var request = require('supertest');
-var app = require('../src/lib/app');*/
-
 describe('get redflag', function(){
-  it('should get a redflag from a ds', function(done){
+  it('should get redflags from a ds', function(done){
     request(app)
       .get('/redflags')
-      .expect(200, done);
+      .expect(200) 
+        done();
   });
 
+});
+
+describe('get intervention', function(){
+  it('should get interventions from a ds', function(done){
+    request(app)
+      .get('/interventions')
+      .expect(200) 
+        done();
+  });
+
+});
+
+describe('post red flag', function(){
+  it('should post a redflag', function(done){
+    var flg=[
+      {'id' : 1, 'name' : 'yes', 'geo' : '75' }
+    ];
+
+    request(app)
+      .post('/redflags')
+      .send(flg)
+      .expect(201)
+      done();
+  });
 });
